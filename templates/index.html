@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html>
+  <head>
+   <title>Gender Classification</title>
+   <body style="background:black; color:white; text-align:center">
+     <h1 style="color:blue">Gender Classification</h1>
+      <h3>A Machine learning model to determine the gender of an individual</h3>
+      <div>
+        <form action="{{ url_for('index') }}" method="POST">
+            <div style="width: 400px">
+                <div>
+                    <p>
+                    Height: <input type="number" value='0.00' step="0.01" name="heit" id="heit">
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                    Hand Length: <input type="number" value='0.00' step="0.01" name="hlen" id="hlen">
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                    Foot Length: <input type="number" value='0.00' step="0.01" name="flen" id="flen">
+                    </p>
+                </div>
+
+                
+                <div>
+                    <button>Submit</button>
+                </div>
+                {% if results %}
+                <p style="text-align:center;">The individual is a {{ results }}</p>
+                {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
+
